@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="layout :: layout(~{::title}, ~{::content})">
+  <head>
+    <meta charset="UTF-8" />
+    <title th:fragment="title">Home</title>
+  </head>
+  <body>
+    <div th:fragment="content">
+      <header class="d-flex justify-content-between">
+        <h1 class="display-4">Lorem Ipsum's Blog</h1>
+        <a href="/get_create" class="btn btn-primary align-self-end"
+          >Create New Blog</a
+        >
+      </header>
+      <hr />
+      <main>
+        <ul class="list-unstyled" th:each="blog : ${blogs}">
+          <li class="shadow rounded ml-1 mr-1 p-4">
+            <a class="text-dark" th:href="@{${blog.id}}">
+              <h2 th:text="${blog.title}" />
+            </a>
+            <p th:text="${blog.content}" />
+            <div class="btn-group" role="group" aria-label="Action buttons">
+              <a th:href="@{${blog.id} + '/get_edit'}" class="btn btn-secondary"
+                >Edit</a
+              >
+
+              <form
+                th:action="@{${blog.id} + '/delete'}"
+                th:object="${blog}"
+                method="post"
+              >
+                <input type="submit" value="Delete" class="btn btn-danger" />
+              </form>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

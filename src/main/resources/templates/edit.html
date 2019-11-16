@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="layout :: layout(~{::title}, ~{::content})">
+  <head>
+    <meta charset="UTF-8" />
+    <title th:fragment="title">Edit</title>
+  </head>
+  <body>
+    <main th:fragment="content">
+      <form
+        th:action="@{/post_edit}"
+        th:object="${blog}"
+        th:insert="form_content::form_content"
+        method="post"
+      >
+        <input type="hidden" name="id" th:value="*{id}" />
+      </form>
+    </main>
+  </body>
+</html>

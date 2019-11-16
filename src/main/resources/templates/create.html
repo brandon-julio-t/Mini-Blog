@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="layout :: layout(~{::title}, ~{::content})">
+  <head>
+    <meta charset="UTF-8" />
+    <title th:fragment="title">Create</title>
+  </head>
+  <body>
+    <main th:fragment="content">
+      <form
+        th:action="@{/post_create}"
+        th:object="${blog}"
+        th:insert="form_content::form_content"
+        method="post"
+      ></form>
+    </main>
+  </body>
+</html>

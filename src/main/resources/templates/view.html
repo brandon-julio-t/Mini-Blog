@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="layout :: layout(~{::title}, ~{::content})">
+  <head>
+    <meta charset="UTF-8" />
+    <title th:fragment="title" th:text="${blog.title}" />
+  </head>
+  <body>
+    <main th:fragment="content">
+      <nav>
+        <a href="/" class="btn btn-info">Back</a>
+      </nav>
+
+      <article class="mt-3 mb-3 p-4 shadow rounded">
+        <h1 class="display-4" th:text="${blog.title}" />
+        <hr />
+        <p th:text="${blog.content}" />
+      </article>
+
+      <div class="btn-group" role="group" aria-label="Action buttons">
+        <form
+          th:action="@{${blog.id} + '/get_edit'}"
+          th:object="${blog}"
+          method="get"
+        >
+          <input type="submit" value="Edit" class="btn btn-secondary" />
+        </form>
+
+        <form
+          th:action="@{${blog.id} + '/delete'}"
+          th:object="${blog}"
+          method="post"
+        >
+          <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
