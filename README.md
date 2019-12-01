@@ -2,7 +2,7 @@
 
 A mini project.
 
-## How to launch
+## How to Launch
 
 1. `git clone` this repository
 1. `cd` into the clonned repository's directory
