@@ -10,6 +10,7 @@ A mini project.
 - Uses JPA as Database ORM
 - Uses [Thymeleaf](https://www.thymeleaf.org/) as server-side template engine
 - Uses [Bootstrap](https://getbootstrap.com/) to design front-end
+- Uses [H2](http://www.h2database.com/html/main.html) as database engine
 
 ## How to Launch
 
