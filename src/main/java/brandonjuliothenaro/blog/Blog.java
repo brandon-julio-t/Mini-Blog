@@ -1,8 +1,9 @@
 package brandonjuliothenaro.blog;
 
-import lombok.*;
-import javax.persistence.*;
+import lombok.Data;
+import lombok.NonNull;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Data
@@ -10,7 +11,7 @@ import javax.validation.constraints.NotBlank;
 public class Blog {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NonNull
@@ -26,12 +27,12 @@ public class Blog {
     }
 
     public Blog(String title, String content) {
-    	try {
-	    	this.title = title;
-	    	this.content = content;
-    	} catch (Exception e) {
-    		System.err.println(e);
-    	}
+        try {
+            this.title = title;
+            this.content = content;
+        } catch (Exception e) {
+            System.err.println(e);
+        }
     }
 
 }
