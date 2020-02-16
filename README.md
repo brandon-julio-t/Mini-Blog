@@ -1,9 +1,7 @@
 [![](https://img.shields.io/badge/status-Finished-brightgreen)]()
 [![](https://img.shields.io/github/last-commit/brandon-julio-t/Mini-Blog)]()
 
-# mini-blog
-
-A mini project.
+# Mini Blog
 
 ## What I Implemented
 
