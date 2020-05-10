@@ -6,7 +6,7 @@
 ## What I Implemented
 
 - Implemented CRUD action
-- Uses [Hibernate](https://hibernate.org/) to model created from form
+- Uses [Hibernate](https://hibernate.org/) to model created form
 - Uses Flash message on CRUD action
 - Uses JPA as Database ORM
 - Uses [Thymeleaf](https://www.thymeleaf.org/) as server-side template engine
